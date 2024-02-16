@@ -93,3 +93,22 @@ Each notebook plays a crucial role in understanding the data, conducting analysi
 - **Opportunities for Further Analysis**: Investigating the reason behind rides with zero passengers and exploring the specific locations corresponding to high-traffic drop-off points could provide valuable insights into taxi ride patterns in the New York City area.
 
 This exploratory analysis provides a comprehensive understanding of the characteristics and patterns within the taxi ride dataset, laying the groundwork for further analysis and modeling in subsequent notebooks.
+
+# Notebook 3: Hypothesis testing
+
+### Hypothesis and Test Results
+![Hypothesis and Test Results](images/13.png)
+
+- **Null Hypothesis ($H_0$)**: There is no difference in the average fare amount between customers who use credit cards and customers who use cash.
+- **Alternative Hypothesis ($H_A$)**: There is a difference in the average fare amount between customers who use credit cards and customers who use cash.
+- **Test Result**: The obtained p-value is extremely low, much lower than the significance level. Thus, the test rejects the null hypothesis, indicating that the difference between the means of the fare amounts by payment type is statistically significant.
+
+### Business Insight
+
+- The key business insight is that encouraging customers to pay with credit cards can generate more revenue for taxi cab drivers.
+
+### Realism of the A/B Project
+
+- This A/B project might not be realistic in a commercial setting due to limitations in data collection and necessary assumptions. The main assumption is that passengers were forced to pay one way or the other, which may not necessarily reflect reality. Additionally, other likely explanations are not considered, such as passenger preference for payment method based on fare amount.
+
+This analysis provides valuable insights into how payment method can impact taxi drivers' revenues, but also highlights the limitations and necessary assumptions in conducting A/B testing projects in a real-world setting.
