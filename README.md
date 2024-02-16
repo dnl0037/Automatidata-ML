@@ -112,3 +112,51 @@ This exploratory analysis provides a comprehensive understanding of the characte
 - This A/B project might not be realistic in a commercial setting due to limitations in data collection and necessary assumptions. The main assumption is that passengers were forced to pay one way or the other, which may not necessarily reflect reality. Additionally, other likely explanations are not considered, such as passenger preference for payment method based on fare amount.
 
 This analysis provides valuable insights into how payment method can impact taxi drivers' revenues, but also highlights the limitations and necessary assumptions in conducting A/B testing projects in a real-world setting.
+
+
+# Notebook 4: Multiple Linear Regression Model
+
+## Outlier Analysis and Data Preprocessing
+
+### Outliers Detection:
+![Outliers Detection](images/14.png)
+
+- All three variables (fare_amount, trip_distance, and trip_duration) contain outliers, with some being extreme.
+- While trip_distance values of 30 miles may seem unusual, they are plausible given the dataset's context.
+- Zero or negative values for fare_amount and trip_duration are problematic and need to be addressed.
+
+### Handling Outliers:
+- Negative values for fare_amount and trip_duration are replaced with zeros.
+- High-end outliers for fare_amount and trip_duration are capped to reduce their impact on the model.
+
+## Feature Engineering and Selection
+
+### New Feature Creation:
+- Created mean_distance and mean_duration columns to capture the mean trip distance and duration for each pickup and dropoff location.
+
+### Correlation Analysis:
+![Correlation Analysis](images/15.png)
+
+- The mean_distance and mean_duration features are strongly correlated with fare_amount, indicating their predictive power.
+- Despite their correlation, both features are included in the model to improve predictive accuracy.
+
+## Model Building and Evaluation
+
+### Model Performance:
+- The multiple linear regression model achieved an R^2 score of 0.868, indicating a good fit to the data.
+- Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) were calculated to assess model accuracy.
+
+### Coefficients Interpretation:
+![Coefficients Analysis](images/16.png)
+
+- Coefficients analysis revealed that mean_distance had the greatest weight in predicting fare_amount.
+- Standardized coefficients were interpreted to understand the impact of each feature on fare_amount.
+- The division of the model coefficient by the standard deviation of the mean_distance feature provides insight into how a one standard deviation change in mean_distance impacts the fare amount, allowing for a more intuitive interpretation in the original unit of distance.
+
+## Key Takeaways
+- Multiple linear regression is effective in estimating fare_amount from various independent variables.
+- Exploratory data analysis aids in selecting relevant features for regression modeling.
+- Model evaluation and interpretation help assess predictive accuracy and feature importance.
+
+## Results Presentation
+- Linear regression assumptions were met, and model performance was evaluated using MAE and RMSE scores.
