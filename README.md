@@ -31,3 +31,65 @@ Each notebook plays a crucial role in understanding the data, conducting analysi
 ### Insights
 
 - Key variables for building a predictive model for taxi fare include `total_amount` and `trip_distance`, which provide insights into the nature of taxi rides.
+
+
+# Notebook 2: Exploratory Data Analysis (EDA)
+
+### Trip Characteristics Analysis
+![Trip Characteristics Analysis](images/3.png)
+
+- **Insights**: The majority of trips were short journeys of less than two miles, with a steep decline in the number of trips as distance traveled increases. This suggests that most taxi rides in the dataset were relatively short in duration.
+
+<table>
+  <tr>
+    <td><img src="images/4.png" alt="Insights1"></td>
+    <td><img src="images/5.png" alt="Insights2"></td>
+  </tr>
+</table>
+
+
+- **Distribution Analysis**: Both the total cost and tip amount distributions are right-skewed, with most costs falling in the $5-15 range and nearly all tips in the $0-3 range. There are no significant differences in tip distributions between vendors, even at higher tip amounts.
+
+### Passenger Count and Ride Frequency
+
+<table>
+  <tr>
+    <td><img src="images/6.png" alt="Passenger Count1"></td>
+    <td><img src="images/7.png" alt="Passenger Count2"></td>
+  </tr>
+</table>
+
+
+- **Findings**: Most rides were single occupancy, with nearly 3% of rides having as many as six passengers. However, there were also 33 rides with a passenger count of zero, which is unusual and may need further investigation.
+
+![Trip Characteristics Analysis](images/8.png)
+- **Tip Amount Variation**: Mean tip amount varies minimally by passenger count, although there is a slight drop for four-passenger rides. This drop is expected given the lower frequency of rides with four passengers.
+
+### Temporal Analysis
+
+![Daily and Monthly Ride Patterns](images/9.png)
+
+- **Daily and Monthly Ride Patterns**: Wednesday through Saturday saw the highest number of daily rides, while Sunday and Monday had the fewest. Thursday had the highest gross revenue, despite having only slightly more rides than Saturday.
+
+![Seasonal Trends](images/10.png)
+
+- **Seasonal Trends**: Monthly rides and revenue follow consistent patterns, with notable dips in the summer months (July, August, September) and one in February.
+
+### Geographic Analysis
+
+<table>
+  <tr>
+    <td><img src="images/11.png" alt="Location Density1"></td>
+    <td><img src="images/12.png" alt="Location Density2"></td>
+  </tr>
+</table>
+
+
+- **Location Density**: Drop-off locations exhibit a characteristic curve related to the cumulative density function of a normal distribution, indicating relatively even distribution across terrain. However, a disproportionate number of locations receive the majority of traffic, likely near popular tourist attractions, airports, and transportation terminals.
+
+### Limitations and Further Investigation
+
+- **Data Limitations**: The dataset lacks geographic coordinates for drop-off locations, limiting the ability to analyze location-specific patterns.
+- **Opportunities for Further Analysis**: Investigating the reason behind rides with zero passengers and exploring the specific locations corresponding to high-traffic drop-off points could provide valuable insights into taxi ride patterns in the New York City area.
+
+This exploratory analysis provides a comprehensive understanding of the characteristics and patterns within the taxi ride dataset, laying the groundwork for further analysis and modeling in subsequent notebooks.
