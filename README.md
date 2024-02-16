@@ -17,14 +17,14 @@ Each notebook plays a crucial role in understanding the data, conducting analysi
 # Notebook 1: Data Inspection and Analysis
 
 ### Data Overview
-![Data Overview](images/1.jpg)
+![Data Overview](images/1.png)
 
 - The `fare_amount` values exhibit a wide range, including negative values, indicating potential data errors.
 - Similarly, the `tip` column contains extremely high values, which may also be erroneous.
 - Trip distances vary, with most rides falling within the 1-3 mile range, but some outliers extend beyond 33 miles.
 
 ### Data Quality Issues
-![Data Quality Issues](images/2.jpg)
+![Data Quality Issues](images/2.png)
 
 - Errors are evident in the data, as indicated by negative `total_amount` values, suggesting potential data entry mistakes.
 
