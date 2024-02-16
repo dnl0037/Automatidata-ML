@@ -158,5 +158,30 @@ This analysis provides valuable insights into how payment method can impact taxi
 - Exploratory data analysis aids in selecting relevant features for regression modeling.
 - Model evaluation and interpretation help assess predictive accuracy and feature importance.
 
-## Results Presentation
-- Linear regression assumptions were met, and model performance was evaluated using MAE and RMSE scores.
+
+# Notebook 5: Ethical Considerations and Model Evaluation
+
+### Ethical Implications
+- The objective of predicting whether a customer will not leave a tip raises ethical concerns due to potential consequences for both drivers and customers.
+- False negatives could upset drivers, while false positives might impact customer access to taxis, potentially disadvantaging certain individuals.
+- Considering the potential problems, the benefits of such a model might not outweigh the ethical considerations, suggesting caution in proceeding with its development.
+
+### Modification to Modeling Objective
+- A modification to predict generous tippers (those tipping 20% or more) could mitigate some ethical concerns while still benefiting drivers.
+- This approach requires careful selection of features and the target variable, aiming to improve driver earnings without restricting customer access to taxis.
+
+### Model Evaluation
+![Model Evaluation](images/17.png)
+
+- Multiple models were evaluated using metrics such as precision, recall, and F1 score, with the Random Forest and XGBoost models showing similar performance.
+- The Random Forest model slightly outperformed XGBoost, making it the recommended choice for predicting generous tippers.
+
+### Recommendations
+![Recommendations](images/18.png)
+- Despite limitations and ethical considerations, the Random Forest model performs acceptably, correctly identifying a significant portion of actual responders.
+- Further exploration into feature importance and vendor analysis could provide additional insights and improvements.
+
+### Conclusion
+- The model's performance, while satisfactory, should be considered alongside ethical implications and potential consequences.
+- Future improvements could involve engineering additional features and acquiring more data on past tipping behavior and cash payments to enhance model accuracy and fairness.
+
